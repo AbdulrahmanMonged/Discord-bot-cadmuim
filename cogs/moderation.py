@@ -5,7 +5,7 @@ import psycopg
 import asyncio
 import time
 import os
-
+nnnnnnnn = 2
 DB_URI = os.getenv("DB_URI")
 db_uri = urlparse(DB_URI)
 host = db_uri.hostname
