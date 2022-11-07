@@ -6,7 +6,6 @@ import asyncio
 import time
 import os
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 DB_URI = os.getenv("DB_URI")
 db_uri = urlparse(DB_URI)
 host = db_uri.hostname
