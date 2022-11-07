@@ -12,7 +12,6 @@ TOKEN = os.getenv("TOKEN")
 DB_URI = os.getenv("DB_URI")
 db_uri = urlparse(DB_URI)
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 host = db_uri.hostname
 database = db_uri.path[1:]
 user = db_uri.username
