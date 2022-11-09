@@ -124,7 +124,7 @@ class Utility(commands.Cog):
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar)
         else:
             embed.set_author(name=ctx.author.name)
-            await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
             
     @commands.command(description="Gets user's Current banner")
     async def banner(self, ctx, *, user: discord.Member = None):
