@@ -24,7 +24,7 @@ class Utility(commands.Cog):
         embed.add_field(name=f"Error occurd at `{ctx.channel.name}`, `{ctx.channel.id}`\n where guild id is `{ctx.guild.id}` and name `{ctx.guild.name}`", value=f"```py\n{str(error)}```\nThe command used is: ```\n{ctx.message.content}```", inline=False)
         await error_channel.send(embed=embed)
         
-    @tasks.loop(seconds=0.001)
+    @tasks.loop(seconds=1.0)
     async def uptime(self):
         global ts, tm, th, td
         ts += 1
