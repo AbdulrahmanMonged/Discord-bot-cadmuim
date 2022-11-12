@@ -40,7 +40,7 @@ class Interactions(commands.Cog):
                         
                   
     @commands.command(description="kisses a member")
-    async def kiss(self, ctx, *, member: discord.Member):
+    async def kiss(self, ctx, member: discord.Member, *):
         async with await psycopg.AsyncConnection.connect(host=host, dbname=database, user=user, password=password, port=port) as db:
             async with db.cursor() as cursor:
                 await cursor.execute("SELECT count(*) FROM INTERACTIONS where USER1_ID = %s and USER2_ID = %s", (ctx.author.id, member.id))
